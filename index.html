@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FitGuide - Your Journey to a Healthier Life</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* General Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Roboto', sans-serif; /* Updated font */
+            line-height: 1.6;
+            background-color: #f0f4f8; /* Updated background color */
+            color: #333;
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px;
+            background-color: #00796b; /* Updated header background color */
+        }
+
+        .logo img {
+            height: 70px;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+        }
+
+        nav ul li {
+            margin-left: 20px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #ffffff; /* Updated link color */
+            font-weight: bold;
+            transition: color 0.3s;
+        }
+
+        nav ul li a:hover {
+            color: #004d40; /* Darker shade on hover */
+        }
+
+        .slideshow {
+            position: relative;
+            width: 80%;
+            max-width: 800px;
+            height: 400px;
+            margin: 20px auto;
+            overflow: hidden;
+            border-radius: 10px;
+        }
+
+        .slideshow img {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: none;
+            transition: opacity 1s ease-in-out;
+        }
+
+        .slideshow img.active {
+            display: block;
+            opacity: 1;
+        }
+
+        .intro {
+            text-align: center;
+            padding: 20px;
+            background-color: #e0f7fa; /* Updated intro background */
+            color: #00796b; /* Text color updated */
+        }
+
+        .quote-section {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 20px 0;
+        }
+
+        .quote-section img {
+            width: 300px;
+            height: auto;
+            margin-right: 20px;
+        }
+
+        blockquote {
+            font-style: italic;
+            font-size: 1.2em;
+            color: #004d40; /* Quote text color */
+        }
+
+        .blog-posts {
+            padding: 20px;
+        }
+
+        .blog-posts h2 {
+            text-align: center;
+            margin-bottom: 20px;
+            color: #00796b; /* Updated heading color */
+        }
+
+        .post-box {
+            display: inline-block;
+            width: 30%;
+            margin: 10px;
+            text-align: center;
+            background-color: #ffffff; /* Post box background */
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Added shadow */
+            transition: transform 0.3s;
+        }
+
+        .post-box:hover {
+            transform: scale(1.05); /* Hover effect */
+        }
+
+        .post-box img {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+        }
+
+        .post-box h3 {
+            margin-top: 10px;
+            font-size: 1.2em;
+            color: #00796b; /* Title color */
+        }
+
+        .post-box h3 a {
+            text-decoration: none;
+            color: #00796b; /* Link color */
+            transition: color 0.3s;
+        }
+
+        .post-box h3 a:hover {
+            color: #004d40; /* Darker color on hover */
+        }
+
+        .newsletter {
+            text-align: center;
+            padding: 20px;
+            background-color: #b2dfdb; /* Updated newsletter background */
+        }
+
+        .newsletter form {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            margin-top: 10px;
+        }
+
+        .newsletter input[type="email"] {
+            padding: 10px;
+            border: 1px solid #004d40; /* Input border color */
+            border-radius: 5px;
+            width: 250px;
+            font-size: 1em;
+        }
+
+        .newsletter button {
+            padding: 10px 20px;
+            background-color: #00796b; /* Button background color */
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 1em;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .newsletter button:hover {
+            background-color: #004d40; /* Darker button color on hover */
+        }
+
+        footer {
+            text-align: center;
+            padding: 10px;
+            background-color: #004d40; /* Footer background color */
+            color: white;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo">
+            <img src="images/logo.png" alt="FitGuide Logo">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Me</a></li>
+                <li><a href="health.html">Personalized Plan</a></li>
+                <li><a href="fitness.html">Fitness</a></li>
+                <li><a href="food.html">Food</a></li>
+                <li><a href="contact.html">Contact Me</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="slideshow">
+        <img src="images/slideshow1.jpg" alt="Slideshow Image 1" class="active">
+        <img src="images/slideshow2.jpg" alt="Slideshow Image 2">
+        <img src="images/slideshow3.jpg" alt="Slideshow Image 3">
+    </section>
+
+    <section class="intro">
+        <h1>Your journey to a healthier, happier life starts here!</h1>
+        <div class="quote-section">
+            <img src="images/health-journey.jpg" alt="Health Journey">
+            <blockquote>“The greatest wealth is health.” – Virgil</blockquote>
+        </div>
+    </section>
+
+    <section class="blog-posts">
+        <h2>Recent Blog Posts</h2>
+        <div class="post-box">
+            <img src="images/blog1.jpg" alt="10-Minute Workouts for Busy Schedules">
+            <h3><a href="posts/post1.html">10-Minute Workouts for Busy Schedules</a></h3>
+            <p>Posted on Dec 10, 2024</p>
+        </div>
+        <div class="post-box">
+            <img src="images/food1.jpg" alt="Healthy Recipe">
+            <h3><a href="posts/foodp1.html">Quick and Easy Breakfast Ideas for Busy Mornings</a></h3>
+            <p>Posted on Dec 15, 2024</p>
+        </div>
+        <div class="post-box">
+            <img src="images/blog2.jpg" alt="Strength Training for Beginners: Where to Start?">
+            <h3><a href="posts/post2.html">Strength Training for Beginners: Where to Start?</a></h3>
+            <p>Posted on Dec 8, 2024</p>
+        </div>
+    </section>
+
+    <section class="newsletter">
+        <h2>Subscribe to Our Newsletter</h2>
+        <p>Stay updated with the latest tips and articles on health and fitness.</p>
+        <form id="newsletter-form">
+            <input type="email" id="email" placeholder="Enter your email" required>
+            <button type="submit">Subscribe</button>
+        </form>
+        <p id="thank-you-message" style="display: none; margin-top: 15px; color: #004d40; font-weight: bold;">
+            Thank you! We've received your email and will be in touch soon.
+        </p>
+    </section>    
+
+    <footer>
+        <p>&copy; 2024 FitGuide. All rights reserved.</p>
+    </footer>
+
+    <script>
+        let slides = document.querySelectorAll('.slideshow img');
+        let currentSlide = 0;
+
+        function showSlide(index) {
+            slides.forEach((slide, i) => {
+                slide.classList.remove('active');
+                if (i === index) slide.classList.add('active');
+            });
+        }
+
+        function nextSlide() {
+            currentSlide = (currentSlide + 1) % slides.length;
+            showSlide(currentSlide);
+        }
+
+        setInterval(nextSlide, 5000); // Change slide every 5 seconds
+    </script>
+
+</body>
+</html>
