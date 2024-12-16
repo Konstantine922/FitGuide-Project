@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fitness Blog - FitGuide</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* General Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            background-color: #f7f7f7;
+            color: #333;
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 25px;
+            background-color: #009688;
+        }
+
+        .logo img {
+            height: 70px;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+        }
+
+        nav ul li {
+            margin-left: 25px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #fff;
+            font-weight: 600;
+            transition: color 0.3s;
+            font-size: 1.1em;
+        }
+
+        nav ul li a:hover {
+            color: #004d40;
+        }
+
+        h1 {
+            text-align: center;
+            margin: 20px 0;
+            color: #00796b;
+        }
+
+        .blog-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            gap: 20px;
+            padding: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .blog-box {
+            width: 30%;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            text-align: center;
+        }
+
+        .blog-box img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .blog-box h3 {
+            margin: 10px 0;
+            font-size: 1.2em;
+            color: #00796b;
+        }
+
+        .blog-box p {
+            font-size: 0.9em;
+            color: #555;
+            margin-bottom: 10px;
+        }
+
+        .blog-box a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        .blog-box a:hover {
+            color: #004d40;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="images/logo.png" alt="FitGuide Logo">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Me</a></li>
+                <li><a href="health.html">Personalized Plan</a></li>
+                <li><a href="fitness.html">Fitness</a></li> <!-- Added Fitness -->
+                <li><a href="food.html">Food</a></li> <!-- Added Food -->
+                <li><a href="contact.html">Contact Me</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <h1>Fitness Blog</h1>
+
+    <section class="blog-container">
+        <div class="blog-box">
+            <img src="images/blog1.jpg" alt="10-Minute Workouts for Busy Schedules">
+            <h3><a href="posts/post1.html">10-Minute Workouts for Busy Schedules</a></h3>
+            <p>Posted on Dec 10, 2024</p>
+        </div>
+        <div class="blog-box">
+            <img src="images/blog2.jpg" alt="Strength Training for Beginners: Where to Start?">
+            <h3><a href="posts/post2.html">Strength Training for Beginners: Where to Start?</a></h3>
+            <p>Posted on Dec 8, 2024</p>
+        </div>
+        <div class="blog-box">
+            <img src="images/blog3.jpg" alt="The Benefits of Stretching: Why You Should Do It Daily">
+            <h3><a href="posts/post3.html">The Benefits of Stretching: Why You Should Do It Daily</a></h3>
+            <p>Posted on Dec 5, 2024</p>
+        </div>
+        <div class="blog-box">
+            <img src="images/blog4.jpg" alt="Cardio vs. Weight Training: Which is Better for Your Goals?">
+            <h3><a href="posts/post4.html">Cardio vs. Weight Training: Which is Better for Your Goals?</a></h3>
+            <p>Posted on Dec 3, 2024</p>
+        </div>
+        <div class="blog-box">
+            <img src="images/blog5.jpg" alt="How to Stay Motivated in Your Fitness Journey">
+            <h3><a href="posts/post5.html">How to Stay Motivated in Your Fitness Journey</a></h3>
+            <p>Posted on Dec 1, 2024</p>
+        </div>
+        <div class="blog-box">
+            <img src="images/blog6.jpg" alt="The Role of Recovery in Fitness: Rest, Sleep, and Nutrition">
+            <h3><a href="posts/post6.html">The Role of Recovery in Fitness: Rest, Sleep, and Nutrition</a></h3>
+            <p>Posted on Nov 29, 2024</p>
+        </div>
+    </section>
+</body>
+</html>

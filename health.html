@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Health - FitGuide</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Basic Styles */
+        body {
+            font-family: 'Arial', sans-serif; /* Updated to match previous font style */
+            line-height: 1.6;
+            background-color: #f7f7f7;
+            color: #333;
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 25px;
+            background-color: #009688;
+        }
+
+        .logo img {
+            height: 50px; /* Adjusted for better proportion */
+            max-width: 100%;
+            object-fit: contain;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+        }
+
+        nav ul li {
+            margin-left: 20px; /* Adjusted margin for balance */
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #fff;
+            font-weight: 600;
+            font-size: 1.1em;
+            transition: color 0.3s;
+        }
+
+        nav ul li a:hover {
+            color: #004d40;
+        }
+
+        .content {
+            padding: 30px 15px;
+            max-width: 800px;
+            margin: 30px auto;
+            background-color: #ffffff;
+            border-radius: 10px;
+            box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            text-align: center;
+            font-size: 2.2em;
+            color: #00796b;
+            margin-bottom: 20px;
+        }
+
+        .personalized-plan h2, .bmi-form h2 {
+            text-align: center;
+            font-size: 1.8em;
+            color: #00796b;
+            margin-bottom: 20px;
+        }
+
+        .personalized-plan form input,
+        .personalized-plan form select,
+        .personalized-plan form textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            font-size: 1.1em;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .personalized-plan form textarea {
+            height: 150px;
+        }
+
+        .personalized-plan .submit-btn,
+        .bmi-form button {
+            background-color: #00796b;
+            color: white;
+            padding: 12px 20px;
+            font-size: 1.2em;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            text-align: center;
+            display: inline-block;
+            transition: background-color 0.3s ease;
+        }
+
+        .personalized-plan .submit-btn:hover,
+        .bmi-form button:hover {
+            background-color: #004d40;
+        }
+
+        footer {
+            text-align: center;
+            padding: 10px;
+            background-color: #009688;
+            margin-top: 30px;
+        }
+
+        footer p {
+            color: #fff;
+        }
+
+        .thank-you-message {
+            display: none;
+            background-color: #dcedc8;
+            padding: 20px;
+            border-radius: 5px;
+            margin-top: 20px;
+            text-align: center;
+        }
+
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo">
+            <img src="images/logo.png" alt="FitGuide Logo">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Me</a></li>
+                <li><a href="health.html">Personalized Plan</a></li>
+                <li><a href="fitness.html">Fitness</a></li>
+                <li><a href="food.html">Food</a></li>
+                <li><a href="contact.html">Contact Me</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Personalized Plan Form -->
+    <div class="personalized-plan">
+        <h2>Get Your Personalized Plan</h2>
+        <form id="personalized-plan-form">
+            <label for="name">Full Name</label>
+            <input type="text" id="name" name="name" placeholder="Enter your full name" required>
+
+            <label for="age">Age</label>
+            <input type="number" id="age" name="age" placeholder="Enter your age" required>
+
+            <label for="weight">Weight</label>
+            <input type="number" id="weight" name="weight" placeholder="Enter your weight" required>
+
+            <label for="height">Height</label>
+            <input type="number" id="height" name="height" placeholder="Enter your height" required>
+
+            <label for="gender">Gender</label>
+            <select id="gender" name="gender" required>
+                <option value="male">Male</option>
+                <option value="female">Female</option>
+                <option value="other">Other</option>
+            </select>
+
+            <label for="water-intake">Daily Water Intake (in liters)</label>
+            <input type="number" id="water-intake" name="water-intake" step="0.1" placeholder="Enter daily water intake" required>
+
+            <label for="activity-level">Activity Level</label>
+            <select id="activity-level" name="activity-level" required>
+                <option value="low">Low</option>
+                <option value="moderate">Moderate</option>
+                <option value="high">High</option>
+            </select>
+
+            <label for="fitness-goal">Fitness Goal</label>
+            <select id="fitness-goal" name="fitness-goal" required>
+                <option value="lose-weight">Lose Weight</option>
+                <option value="maintain-weight">Maintain Weight</option>
+                <option value="gain-muscle">Gain Muscle</option>
+            </select>
+            
+            <label for="personalized-plan">Personalized Plan</label>
+            <select id="personalized-plan" name="personalized-plan" required>
+                <option value="diet-plan">Diet Plan</option>
+                <option value="exercise-plan">Exercise Plan</option>
+            </select>
+
+            <button type="submit" class="submit-btn">Submit for Plan</button>
+        </form>
+    </div>
+
+    <!-- Thank You Message -->
+    <div class="thank-you-message">
+        <p>Thank you for submitting your personalized plan. We will contact you back soon!</p>
+    </div>
+
+    <script>
+
+        // Personalized Plan Submission
+        document.getElementById('personalized-plan-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            document.querySelector('.thank-you-message').style.display = 'block';
+            setTimeout(function() {
+                document.querySelector('.thank-you-message').style.display = 'none';
+            }, 5000);
+        });
+    </script>
+</body>
+</html>
