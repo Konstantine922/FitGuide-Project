@@ -1,0 +1,141 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif; /* Modern sans-serif font */
+    background-color: #f8f9fa; /* Light grey background for a clean, minimal look */
+    color: #333; /* Dark grey text for better readability */
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #333; /* Dark background for header */
+    padding: 20px;
+    text-align: center;
+}
+
+header .logo img {
+    width: 120px; /* Adjusted logo size */
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    text-align: center;
+}
+
+nav ul li {
+    display: inline-block;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: #333; /* Black color for clickable links */
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 500;
+    transition: color 0.3s ease; /* Smooth transition on hover */
+}
+
+nav ul li a:hover {
+    color: #ff6f61; /* Accent color on hover (coral red) */
+}
+
+.slideshow img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.intro {
+    text-align: center;
+    margin: 40px 0;
+}
+
+.intro .quote-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 30px;
+}
+
+.intro img {
+    width: 40%;
+}
+
+.quote-section blockquote {
+    font-size: 1.5em;
+    font-style: italic;
+    color: #666; /* Lighter grey for quotes */
+    margin: 0;
+}
+
+.blog-posts {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    margin: 40px 0;
+}
+
+.post-box {
+    width: 30%;
+    padding: 20px;
+    background-color: white;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    margin-bottom: 30px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth hover effect */
+}
+
+.post-box:hover {
+    transform: translateY(-10px); /* Lift effect on hover */
+    box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+}
+
+.post-box img {
+    width: 100%;
+    height: auto;
+}
+
+.newsletter form {
+    text-align: center;
+    margin: 40px 0;
+}
+
+.newsletter input {
+    padding: 12px;
+    font-size: 16px;
+    width: 70%;
+    margin-right: 15px;
+    border: 1px solid #ddd; /* Subtle border for input */
+    border-radius: 5px;
+}
+
+.newsletter button {
+    padding: 12px;
+    font-size: 16px;
+    background-color: #ff6f61; /* Accent color */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.newsletter button:hover {
+    background-color: #333; /* Dark background on hover */
+}
+
+footer {
+    background-color: #333; /* Dark background for footer */
+    color: white;
+    text-align: center;
+    padding: 15px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
